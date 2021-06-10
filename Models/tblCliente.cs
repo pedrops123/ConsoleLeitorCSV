@@ -12,9 +12,13 @@ namespace Models {
         public string Fone { get; set; }
         public int CodSexo { get; set; }
         public string Email { get; set; }
+        [NotMapped]
         public virtual tblPais pais { get; set; }
+        [NotMapped]
         public virtual tblSexo sexo { get; set; }
+        [NotMapped]
         public virtual List<tblPedido> pedidos { get; set; }
+        [NotMapped]
         public virtual List<tblResposta> respostas { get; set; }
     }
 }

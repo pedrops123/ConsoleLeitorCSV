@@ -64,7 +64,8 @@ namespace ContextDB {
             builder.Entity<tblPedido>(r=>{
                 r.HasKey(r=>r.CodPedido);
                 r.HasOne(r => r.cliente)
-                .WithMany(r=>r.pedidos);
+                .WithMany(r=>r.pedidos)
+                .HasForeignKey(r=>r.CodCliente);
                 r.ToTable("tblPedido");
             });
 
@@ -81,7 +82,8 @@ namespace ContextDB {
             builder.Entity<tblQuestaoOpcao>(r=>{
                 r.HasKey(r => r.CodQuestaoOpcao);
                 r.HasOne(r => r.questao)
-                .WithMany(r => r.opcoes);
+                .WithMany(r => r.opcoes)
+                .HasForeignKey(r=>r.CodQuestao);
                 r.ToTable("tblQuestaoOpcao");
             });
 

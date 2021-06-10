@@ -10,12 +10,14 @@ namespace LeitorExcel{
     public class GetDataExcel {
         private  static string  diretorioRaiz = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location).Replace("\\bin\\Debug\\net5.0","");
         private string diretorioDataExcel = Path.Combine(diretorioRaiz,"DataCSV");
+        private static System.Text.Encoding  EncodingText =  System.Text.Encoding.UTF7; 
         public List<tblSexo> GetDataSexo(){
          List<tblSexo> listaSexo = new List<tblSexo>();
+        
          int posicaoRow = 0;
             try
             {
-                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblSexo.csv"))){
+                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblSexo.csv"),EncodingText)){
                     while(!reader.EndOfStream){
                         var linha = reader.ReadLine();
                         var dadosSeparados = linha.Split(";");
@@ -40,7 +42,7 @@ namespace LeitorExcel{
          int posicaoRow = 0;
             try
             {
-                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblPais.csv"))){
+                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblPais.csv"),EncodingText)){
                     while(!reader.EndOfStream){
                         var linha = reader.ReadLine();
                         var dadosSeparados = linha.Split(";");
@@ -65,7 +67,7 @@ namespace LeitorExcel{
          int posicaoRow = 0;
             try
             {
-                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblQuestao.csv"))){
+                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblQuestao.csv"),EncodingText)){
                     while(!reader.EndOfStream){
                         var linha = reader.ReadLine();
                         var dadosSeparados = linha.Split(";");
@@ -90,7 +92,7 @@ namespace LeitorExcel{
          int posicaoRow = 0;
             try
             {
-                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblQuestaoOpcao.csv"))){
+                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblQuestaoOpcao.csv"),EncodingText)){
                     while(!reader.EndOfStream){
                         var linha = reader.ReadLine();
                         var dadosSeparados = linha.Split(";");
@@ -117,7 +119,7 @@ namespace LeitorExcel{
          int posicaoRow = 0;
             try
             {
-                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblResposta.csv"))){
+                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblResposta.csv"),EncodingText)){
                     while(!reader.EndOfStream){
                         var linha = reader.ReadLine();
                         var dadosSeparados = linha.Split(";");
@@ -143,7 +145,7 @@ namespace LeitorExcel{
          int posicaoRow = 0;
             try
             {
-                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblCliente.csv"))){
+                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblCliente.csv"),EncodingText)){
                     while(!reader.EndOfStream){
                         var linha = reader.ReadLine();
                         var dadosSeparados = linha.Split(";");
@@ -173,7 +175,7 @@ namespace LeitorExcel{
          int posicaoRow = 0;
             try
             {
-                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblPedido.csv"))){
+                using(StreamReader reader = new StreamReader(Path.Combine(diretorioDataExcel,"tblPedido.csv"),EncodingText)){
                     while(!reader.EndOfStream){
                         var linha = reader.ReadLine();
                         var dadosSeparados = linha.Split(";");

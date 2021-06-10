@@ -8,6 +8,7 @@ namespace Models {
         public int CodQuestao { get; set; }
         public int CodOpcao { get; set; }
         public string DescOpcao { get; set; }
+        [NotMapped]
         public virtual tblQuestao questao  { get; set; }
 
     }

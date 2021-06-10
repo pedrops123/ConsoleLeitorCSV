@@ -8,9 +8,11 @@ namespace Models{
         public int CodResposta { get; set; }
         public int CodCliente { get; set; }
         public int CodQuestaoOpcao { get; set; }
-
+        [NotMapped]
         public virtual tblCliente cliente { get; set; }
+        [NotMapped]
         public virtual tblQuestaoOpcao opcao { get; set; }
+        [NotMapped]
         public virtual List<tblResposta> respostas {get;set;}
     }    
 }

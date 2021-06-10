@@ -6,6 +6,7 @@ namespace Models {
         public int CodPedido { get; set; }
         public int CodCliente { get; set; }
         public int QtdPedidos { get; set; }
+        [NotMapped]
         public virtual tblCliente cliente { get; set; }
     }
 }

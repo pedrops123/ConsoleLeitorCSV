@@ -8,6 +8,7 @@ namespace Models {
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.None)]
         public int CodPais { get; set; }
         public string DescPais { get; set; }
+        [NotMapped]
         public virtual List<tblCliente> clientes { get; set; }
     }
 }
