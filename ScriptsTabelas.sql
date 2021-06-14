@@ -13,6 +13,9 @@ CREATE TABLE [dbo].[tblCliente](
 	[Fone] [varchar](50) NULL,
 	[CodSexo] [int] NULL,
 	[Email] [varchar](1000) NULL,
+	/* Campos atividade ex  C# e ASP.NET  - 1  - 14/06 - Pedro Furlan */
+	[Endereco][varchar](1000) NULL,
+	[Cidade][varchar](1000) NULL
  CONSTRAINT [PK_tblCliente] PRIMARY KEY CLUSTERED 
 (
 	[CodCliente] ASC

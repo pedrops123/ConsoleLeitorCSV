@@ -12,6 +12,11 @@ namespace Models {
         public string Fone { get; set; }
         public int CodSexo { get; set; }
         public string Email { get; set; }
+
+        // Campos incluidos no exercicio 1 - ASP.NET C# - 14/06 - Pedro Furlan
+        public string Endereco { get; set; }
+        public string Cidade { get; set; }
+        
         [NotMapped]
         public virtual tblPais pais { get; set; }
         [NotMapped]
