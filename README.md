@@ -21,3 +21,5 @@ Instruções de uso :
 
 	* Não é necessario executar o script "ScriptsTabelas.sql" manualmente , o proprio sistema fará o processo de criação das tabelas de acordo com o script
 	sql enviado , porém , ficará ao seu criterio rodar ou não , o sistema funcionara normalmente dos dois modos.
+	
+	* Certifique que o database "TesteDB" realmente existe na base de dados local antes de rodar o sistema , Caso contrario o sistema nao irá gerar as tabelas automaticamente.
